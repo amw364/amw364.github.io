@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Portfolio | Rutgers Business School</title>
+  <title>Avana Williams | Rutgers Portfolio</title>
   <style>
     :root {
       --primary: #0d1b2a;
@@ -28,7 +28,7 @@
       line-height: 1.6;
     }
 
-    /* Top Navigation Header */
+    /* Navigation Header */
     header {
       background: #ffffff;
       border-bottom: 1px solid var(--border);
@@ -146,8 +146,8 @@
 
     .hero-bio .badge {
       display: inline-block;
-      background: #f1f5f9;
-      color: var(--text-muted);
+      background: #fff5f5;
+      color: var(--accent);
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 0.8rem;
@@ -169,7 +169,8 @@
 
     .contact-links {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .contact-links a {
@@ -186,7 +187,7 @@
       border-color: var(--accent);
     }
 
-    /* Sections */
+    /* General Sections */
     section {
       margin-bottom: 3.5rem;
     }
@@ -203,10 +204,10 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Grid Layouts */
+    /* Cards Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
 
@@ -223,26 +224,70 @@
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     }
 
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+
     .card h3 {
       font-size: 1.1rem;
       color: var(--primary);
-      margin-bottom: 0.5rem;
     }
 
-    .card .category {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      font-weight: 700;
+    .card .date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .card .subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
-    .card p {
+    .card ul {
+      padding-left: 1.2rem;
       color: var(--text-muted);
       font-size: 0.9rem;
     }
 
-    /* Resume Embed Box */
+    .card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Skills & Interests Tags */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #f1f5f9;
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Resume Embed Frame */
     .resume-viewer {
       width: 100%;
       height: 600px;
@@ -277,15 +322,16 @@
 </head>
 <body>
 
-  <!-- Header / Navigation Bar -->
+  <!-- Navigation Bar -->
   <header>
     <div class="nav-container">
-      <a href="#" class="brand"><span>RBS</span> Student Portfolio</a>
+      <a href="#" class="brand"><span>RBS</span> Avana Williams</a>
       <nav>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#extracurriculars">Extracurriculars</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#activities">Activities</a>
+        <a href="#skills">Skills</a>
         <a href="#resume">Resume</a>
-        <!-- Resume download link -->
         <a href="resume.pdf" download class="btn-download">Download Resume</a>
       </nav>
     </div>
@@ -295,71 +341,155 @@
     <!-- Hero / Profile Section -->
     <div class="hero">
       <div class="profile-card">
-        <!-- Make sure image file uploaded to GitHub is headshot.jpg -->
-        <img src="headshot.jpg" alt="Student Headshot" class="profile-img">
-        <div class="student-name">Your Name</div>
-        <div class="student-school">Rutgers Business School</div>
-        <div class="student-year">Class of 202X</div>
+        <img src="headshot.jpg" alt="Avana Williams Headshot" class="profile-img">
+        <div class="student-name">Avana Williams</div>
+        <div class="student-school">Rutgers University</div>
+        <div class="student-year">Class of 2028</div>
       </div>
       <div class="hero-bio">
-        <span class="badge">Currently: Exploring Majors</span>
-        <h1>Driven by analytical thinking & strategic leadership.</h1>
+        <span class="badge">B.S. in Finance | Real Estate Concentration</span>
+        <h1>Driven by financial analysis, real estate, & entrepreneurship.</h1>
         <p>
-          Welcome to my academic and professional portfolio. As an undergraduate student at Rutgers Business School, I focus on building core skills across finance, marketing, and business analytics. Explore my academic projects, campus involvement, and full resume below.
+          Welcome to my online portfolio. I am an undergraduate Finance student at Rutgers University – New Brunswick (GPA: 3.5) with practical experience spanning commercial real estate certificate programs, business ownership, and operations. Explore my work history, projects, and skills below.
         </p>
         <div class="contact-links">
-          <a href="mailto:your.email@rutgers.edu">Email Me</a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile &rarr;</a>
+          <a href="mailto:avanawilliams10@gmail.com">Email: avanawilliams10@gmail.com</a>
+          <a href="tel:5108210206">Phone: (510) 821-0206</a>
+          <a href="#resume">Location: Oakland, CA / New Brunswick, NJ</a>
         </div>
       </div>
     </div>
 
-    <!-- Portfolio / Projects Section -->
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Work & Professional Experience</h2>
+      <p class="section-subtitle">Operational, managerial, and entrepreneurial roles.</p>
+      <div class="grid">
+        
+        <div class="card">
+          <div class="card-header">
+            <h3>Velocity Shine Detailing</h3>
+            <span class="date">May 2023 – June 2023</span>
+          </div>
+          <div class="subtitle">Entrepreneur & Business Owner — Piedmont, CA</div>
+          <ul>
+            <li>Utilized various marketing platforms to promote the business, such as Yelp, TikTok, and Instagram.</li>
+            <li>Acquired customers using door knocking, referrals, and positive reviews.</li>
+            <li>Researched and invested in high-quality products to enhance service efficiency.</li>
+            <li>Improved time management skills by working on multiple jobs daily[cite: 8].</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Gate Gourmet</h3>
+            <span class="date">Aug 2024 – Oct 2024</span>
+          </div>
+          <div class="subtitle">Dishwashing, Laborer — San Francisco, CA</div>
+          <ul>
+            <li>Managed time effectively to meet strict deadlines, ensuring tasks were completed in a timely manner[cite: 8].</li>
+            <li>Applied strong organizational skills to keep equipment and supplies well-maintained and clean[cite: 8].</li>
+            <li>Bridged language barriers to enhance communication and teamwork within a diverse staff[cite: 8].</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Portfolio & Projects Section -->
     <section id="portfolio">
-      <h2 class="section-title">Core Business Portfolio</h2>
-      <p class="section-subtitle">Projects demonstrating strategic thinking, teamwork, and analysis.</p>
+      <h2 class="section-title">Projects & Programs</h2>
+      <p class="section-subtitle">Key training programs and real estate valuation projects[cite: 8].</p>
       <div class="grid">
+
         <div class="card">
-          <div class="category">Business Analytics</div>
-          <h3>Market Research & Data Analysis</h3>
-          <p>Analyzed consumer trend datasets to identify potential target markets and recommended data-driven marketing strategies for a semester project.</p>
+          <div class="card-header">
+            <h3>Project Destined</h3>
+            <span class="date">May 2024 – May 2024</span>
+          </div>
+          <div class="subtitle">Intern, Commercial Real Estate Fundamentals Certificate Program — New Brunswick, NJ</div>
+          <ul>
+            <li>Attended weekly webinars led by Cedric Bobo, covering the foundations of commercial real estate[cite: 8].</li>
+            <li>Participated in property analysis projects, utilizing data on local supply/demand, population growth, and macroeconomic indicators[cite: 8].</li>
+            <li>Explored property valuation methods, including comparable sales analysis and the income approach[cite: 8].</li>
+            <li>Evaluated financing options, such as traditional financing, equity partnerships, and tax credits[cite: 8].</li>
+            <li>Collaborated with peers to present investments, improving teamwork and communication skills[cite: 8].</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="category">Finance</div>
-          <h3>Financial Statement Analysis</h3>
-          <p>Evaluated corporate financial statements, calculating key performance metrics, liquidity ratios, and long-term profitability trends.</p>
-        </div>
-        <div class="card">
-          <div class="category">Strategy</div>
-          <h3>Cross-Functional Business Plan</h3>
-          <p>Collaborated with a student team to draft a comprehensive business model canvas for a hypothetical startup pitch.</p>
-        </div>
+
       </div>
     </section>
 
-    <!-- Extracurriculars Section -->
-    <section id="extracurriculars">
-      <h2 class="section-title">Extracurricular Involvement</h2>
-      <p class="section-subtitle">Leadership roles, campus clubs, and community contributions.</p>
+    <!-- Extracurriculars & Volunteer Work -->
+    <section id="activities">
+      <h2 class="section-title">Extracurriculars & Volunteer Experience</h2>
+      <p class="section-subtitle">Campus involvement and community service[cite: 8].</p>
       <div class="grid">
+
         <div class="card">
-          <div class="category">Student Organization</div>
-          <h3>Rutgers Business Club Member</h3>
-          <p>Actively engage in weekly workshops, corporate networking events, and case study practice sessions to refine professional skills.</p>
+          <div class="card-header">
+            <h3>Habitat For Humanity</h3>
+            <span class="date">March 2023 – May 2023</span>
+          </div>
+          <div class="subtitle">Volunteer, Construction Worker — Walnut Creek, CA</div>
+          <ul>
+            <li>Utilized various construction tools to build Esperanza Place, affordable housing in the Bay Area[cite: 8].</li>
+            <li>Adapted to varying construction assignments given, demonstrating flexibility[cite: 8].</li>
+            <li>Loaded and unloaded construction materials from trucks[cite: 8].</li>
+            <li>Followed strict safety protocols on-site and removed debris and hazards during clean-up[cite: 8].</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="category">Leadership</div>
-          <h3>Peer Academic Tutor</h3>
-          <p>Provide 1-on-1 guidance to fellow business students in introductory accounting and statistics coursework.</p>
-        </div>
+
       </div>
     </section>
 
-    <!-- Embedded Resume Section -->
+    <!-- Skills, Interests & Languages -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Interests</h2>
+      <p class="section-subtitle">Technical proficiencies, campus activities, and core interests[cite: 8].</p>
+      <div class="skills-grid">
+
+        <div class="card skill-card">
+          <h4>Technical Skills</h4>
+          <div class="tag-container">
+            <span class="tag">Java</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">Blender</span>
+            <span class="tag">Microsoft Word</span>
+            <span class="tag">PowerPoint</span>
+            <span class="tag">80 WPM Typing</span>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <h4>Activities & Interests</h4>
+          <div class="tag-container">
+            <span class="tag">Real Estate Club</span>
+            <span class="tag">Real Estate Development</span>
+            <span class="tag">Affordable Housing</span>
+            <span class="tag">Politics & Economics</span>
+            <span class="tag">Personal Finance</span>
+            <span class="tag">Construction</span>
+            <span class="tag">Volunteering</span>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <h4>Languages</h4>
+          <div class="tag-container">
+            <span class="tag">English (Native)</span>
+            <span class="tag">Chinese (High School)</span>
+            <span class="tag">Spanish (Elementary)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Resume View -->
     <section id="resume">
       <h2 class="section-title">Resume</h2>
       <p class="section-subtitle">View my complete interactive resume below, or click 'Download Resume' above.</p>
-      <!-- Make sure your resume file uploaded to GitHub is named resume.pdf -->
       <iframe src="resume.pdf" class="resume-viewer">
         <p>Your browser does not support PDF embeds. You can <a href="resume.pdf">click here to download the PDF file.</a></p>
       </iframe>
@@ -367,7 +497,7 @@
   </main>
 
   <footer>
-    &copy; 2026 Your Name — Rutgers Business School Portfolio
+    &copy; 2026 Avana Williams — Rutgers University Portfolio
   </footer>
 
 </body>
